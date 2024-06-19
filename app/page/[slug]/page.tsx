@@ -12,7 +12,7 @@ async function getPageData(slug: string) {
         }
     }`
 
-    const res = await fetch(`${[process.env.WORDPRESS_API_URL]}?query=${encodeURIComponent(query)}`, {
+    const res = await fetch(`${[process.env.NEXT_PUBLIC_WORDPRESS_API_URL]}?query=${encodeURIComponent(query)}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -32,8 +32,8 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
 
     return (
         <div className="col-span-12 p-10 bg-black rounded-lg">
-            <h1 className="text-2xl font-bold">{page.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: page.content }} className="space-y-4"></div>
+            <h1 className="text-2xl font-bold text-white">{page.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: page.content }} className="space-y-4 text-white"></div>
         </div>
     )
 }

@@ -18,7 +18,7 @@ async function getPosts(category: string) {
         }
     }`
 
-    const res = await fetch(`${[process.env.WORDPRESS_API_URL]}?query=${encodeURIComponent(query)}`, {
+    const res = await fetch(`${[process.env.NEXT_PUBLIC_WORDPRESS_API_URL]}?query=${encodeURIComponent(query)}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"

@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <div className="col-span-12 bg-black rounded-md p-12">
-                <h1 className="text-xl font-bold flex items-center gap-2 mb-3">
+                <h1 className="text-xl text-white font-bold flex items-center gap-2 mb-3">
                     <IconMapQuestion stroke={2} className="w-6 h-6 text-orange-500" />
                     Tire todas suas dúvidas aqui!
                 </h1>

@@ -21,7 +21,7 @@ async function getSubCategories(category: string) {
         }
     }`
 
-    const res = await fetch(`${[process.env.WORDPRESS_API_URL]}?query=${encodeURIComponent(query)}`, {
+    const res = await fetch(`${[process.env.NEXT_PUBLIC_WORDPRESS_API_URL]}?query=${encodeURIComponent(query)}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -49,8 +49,8 @@ export default async function Categories({ category }: CategoriesProps) {
         <>
             {subCategories.map(function (subCategorie: SubCategorie) {
                 return (
-                    <div className="col-span-6" key={subCategorie.slug}>
-                        <h2 className="text-white text-xl font-bold my-5">{subCategorie.name}</h2>
+                    <div className="col-span-4 bg-black rounded-md p-8" key={subCategorie.slug}>
+                        <h2 className="text-white text-xl font-bold mb-4">{subCategorie.name}</h2>
                         <Posts category={subCategorie.slug} />
                     </div>
                 )

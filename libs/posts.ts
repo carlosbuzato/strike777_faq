@@ -1,6 +1,6 @@
 export type Posts = {
     title: string,
-    content: string,
+    content?: string,
     slug: string
 }
 
